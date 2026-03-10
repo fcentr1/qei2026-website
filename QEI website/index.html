@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quantum Energy Initiative Workshop 2026 – ICFO</title>
+  <meta name="description" content="Quantum Energy Initiative Workshop 2026 at ICFO, Castelldefels (Barcelona, Spain)." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23003B71'/><text x='50' y='58' font-size='46' text-anchor='middle' fill='white' font-family='Arial'>Q</text></svg>">
+  <style>
+    :root{
+      --bg: #0a0f1b;       /* dark background */
+      --panel: #111827;    /* card background */
+      --text: #e5e7eb;     /* text */
+      --muted: #9ca3af;    /* muted text */
+      --brand: #18c37e;    /* QEI green */
+      --accent: #0f915f;   /* secondary */
+      --border: #1f2a3b;
+      --maxw: 1100px;
+    }
+    /* Light theme variables */
+    body.light{
+      --bg: #f7fafc;
+      --panel: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --brand: #168e61;
+      --accent: #0c6c49;
+      --border: #e2e8f0;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;line-height:1.6}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg, color-mix(in oklab, var(--bg) 92%, black 8%), color-mix(in oklab, var(--bg) 80%, transparent 20%));backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:10px;align-items:center}
+    .brand .title{font-weight:700}
+    nav ul{display:flex;gap:14px;flex-wrap:wrap;list-style:none;margin:0;padding:0}
+    nav a{padding:8px 10px;border-radius:10px}
+    nav a:hover{background:color-mix(in oklab, var(--panel) 80%, black 20%)}
+    .mobile-toggle{display:none}
+
+    .theme-toggle{border:1px solid var(--border);background:var(--panel);color:var(--text);padding:8px 10px;border-radius:10px}
+
+    .hero{position:relative;overflow:hidden}
+    .hero-inner{padding:72px 0;display:grid;gap:18px;align-items:start}
+    .badge{display:inline-flex;gap:8px;align-items:center;font-size:12px;color:var(--muted);background:var(--panel);border:1px solid var(--border);padding:6px 10px;border-radius:999px}
+    h1{font-size:clamp(28px,4vw,46px);line-height:1.15;margin:0}
+    .lead{font-size:clamp(16px,2.1vw,20px);max-width:75ch}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;font-weight:700;border:1px solid var(--border);background:var(--panel);color:var(--text)}
+    .btn.primary{background:linear-gradient(90deg, var(--brand), color-mix(in oklab, var(--brand) 30%, var(--panel) 70%));border-color:transparent;color:white}
+    .btn.secondary{background:var(--panel)}
+
+    section{padding:36px 0}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px}
+    .muted{color:var(--muted)}
+    ul{margin:8px 0 0 22px}
+
+    /* Justify only the long paragraphs in the hero description card */
+    .hero-inner .card p{ text-align: justify; text-justify: inter-word; }
+
+    footer{padding:28px 0;border-top:1px solid var(--border);color:var(--muted)}
+
+    @media (max-width: 860px){
+      .mobile-toggle{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--panel);color:var(--text);padding:8px 10px;border-radius:10px}
+      nav{display:none}
+      nav.open{display:block}
+      nav ul{flex-direction:column;gap:0}
+      nav a{display:block;padding:12px}
+      .hero-inner{padding:48px 0}
+    }
+
+    /* Sponsor logo grid */
+    .logo-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:12px;
+      align-items:stretch;
+    }
+    .logo-card{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:96px;
+    }
+    .logo-card a{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+    }
+    .logo-card a:hover{ text-decoration:none; }
+    .logo-card img{
+      max-width:100%;
+      max-height:64px;
+      width:auto;
+      height:auto;
+    }
+
+    /* Sponsor logo swap (dark vs light) */
+    .sponsor-logo-light { display: none; }
+    body.light .sponsor-logo-light { display: block; }
+    body.light .sponsor-logo-dark { display: none; }
+    
+    .notice{
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 14px;
+  padding: 14px;
+}
+.notice strong{ display:block; margin-bottom:6px; }
+    
+    
+  </style>
+
+  <!-- Event structured data for SEO (dates/venue only) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Quantum Energy Initiative Workshop 2026",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "startDate": "2026-05-18",
+    "endDate": "2026-05-22",
+    "location": {
+      "@type": "Place",
+      "name": "ICFO – The Institute of Photonic Sciences",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Castelldefels",
+        "addressRegion": "Barcelona",
+        "addressCountry": "ES"
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <a href="https://quantum-energy-initiative.org/" class="brand-link" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px">
+          <img src="assets/qei-logo.png" alt="Quantum Energy Initiative logo" height="36" style="display:block" />
+          <div class="title">QEI Workshop 2026</div>
+        </a>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">Toggle light</button>
+        <button class="mobile-toggle" aria-controls="primary-nav" aria-expanded="false" id="navToggle">Menu ▾</button>
+      </div>
+      <nav id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#registration">Registration</a></li>
+          <li><a href="#speakers">Invited Speakers</a></li>
+          <li><a href="#topics">Topics</a></li>
+          <li><a href="#committee">Committee</a></li>
+          <li><a href="#venue">Venue &amp; Travel</a></li>
+          <li><a href="#links">External Links</a></li>
+          <li><a href="#accommodation">Accommodation</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="container hero-inner">
+      <span class="badge">18–22 May 2026 • ICFO Auditorium • Castelldefels (Barcelona, Spain)</span>
+      <h1>Quantum Energy Initiative Workshop</h1>
+      <p class="lead">The third Quantum Energy Initiative Workshop will happen at ICFO, Castelldefels (Barcelona, Spain) from the 18<sup>th</sup> to the 22<sup>nd</sup> of May 2026. <strong>Save the date !</strong></p>
+
+      <div class="cta">
+        <a class="btn primary" href="https://8cenz4ov6wn.typeform.com/QEI2026" target="_blank" rel="noopener">Register (free)</a>
+        <a class="btn" href="#links">External links</a>
+      </div>
+
+      <div class="card" style="margin-top:6px">
+        <p>Launched in August 2022, the Quantum Energy Initiative is fostering a worldwide community of experts willing to develop scientific approaches to evaluating and minimizing the physical resource costs of emerging quantum technologies. This requires the synergy of a broad range of expertises, from fundamental quantum physics to enabling technologies, from hardware to software, from research to industry.</p>
+        <p>Building on the strong foundations at the first workshop (Singapore, Nov 2023), and second workshop (Grenoble, Jan 2025), this third workshop will bring together highly renowned speakers of all these areas, to provide their vision on these exciting and essential questions. It will also leave time for discussions and crossed-fertilization to the build new methodologies and roadmaps.</p>
+      </div>
+    </div>
+  </main>
+
+  <section id="registration">
+    <div class="container">
+      <h2>Registration</h2>
+      <div class="notice">
+  <strong>Important update</strong>
+  <ul>
+    <li><strong>Talk submission deadline postponed to 25 March 2026.</strong></li>
+    <li>Registration to participate without contribution (or to submit a poster) remains open until capacity is reached.</li>
+  </ul>
+</div>
+      <p><strong>Free registration</strong>. Deadline for abstract submission is <strong>10 March 2026</strong>.</p>
+
+      <p>
+        <a class="btn primary" href="https://8cenz4ov6wn.typeform.com/QEI2026" target="_blank" rel="noopener">Register now (free)</a>
+      </p>
+
+      <div class="card">
+        <ul>
+          <li>No fee is charged, but registration is required for planning (seating, catering, badges).</li>
+          <li>After registering, you will receive a confirmation email.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="speakers">
+    <div class="container">
+      <h2>Invited Speakers</h2>
+      <ul>
+        <li>Natalia Ares, University of Oxford (UK)</li>
+        <li>Fernando Brandão, California Institute of Technology &amp; AWS Center for Quantum Computing (USA)</li>
+        <li>James Q. Quach — CSIRO (Australia); Science Leader, Quantum Batteries team.</li>
+        <li>Gerard Milburn, National Quantum Computing Centre, NQCC (UK)</li>
+        <li>Juan Parrondo, Universidad Complutense de Madrid (Spain)</li>
+        <li>Chris Langer, Quantinuum (USA)</li>
+        <li>Michael Vasmer, INRIA (France)</li>
+        <li>Arnau Riera, Qilimanjaro (Spain)</li>
+        <li>Ariane Soret, Quandela (France)</li>
+        <li>Nelly Ng, SPMS, Nanyang Technological University (Singapore)</li>
+        <li>Christiane Koch, Freie Universität Berlin (Germany)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="topics">
+    <div class="container">
+      <h2>Topics of the workshop</h2>
+      <p class="muted">Research on energy or other resources in the following contexts:</p>
+      <ul>
+        <li>Fundamental quantum devices: Energy, entropy or resources at the fundamental quantum level, quantum gates, generation and preparation of quantum resources, interconnect quantum functionalities.</li>
+        <li>Quantum hardware and enabling technologies: Macroscopic energy and entropy for quantum devices, implementations of cooling systems, control electronics, energy aware full‑stack computers etc.</li>
+        <li>Quantum algorithms and software: NISQ or large‑scale quantum computing, quantum communication protocols, resource optimization, error correction, compilation etc.</li>
+        <li>Hybrid HPC‑quantum, reservoir computing, etc: High‑performance computing (HPC) in hybrid with quantum technologies. Reservoir and Neuromorphic computing. Classical computing inspired by quantum algorithms. Other technologies that are hybrids of quantum and classical, etc.</li>
+        <li>Classical computing &amp; classical information thermodynamics: resources in classical computing, fundamental bounds on classical information processing, etc.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="committee">
+    <div class="container">
+      <h2>Scientific &amp; Organizing Committee</h2>
+      <ul>
+        <li><strong>Coordination:</strong> Raja Yehia and Federico Centrone (ICFO, Barcelona)</li>
+        <li>Robert Whitney (Université Grenoble Alpes &amp; CNRS)</li>
+        <li>Alexia Auffèves (Majulab, CNRS, Singapore)</li>
+        <li>Frederico Brito (USP/Brazil‑TII/UAE)</li>
+        <li>Olivier Ezratty (EPITA, Paris)</li>
+        <li>Mercè Latorre (ICFO, Barcelona)</li>
+        <li>Alimuddin Mir (ICFO, Barcelona)</li>
+        <li>Yasser Omar (University of Lisbon &amp; Portuguese Quantum Institute)</li>
+      </ul>
+      <p style="margin-top:12px">More information to come. Stay tunned!</p>
+    </div>
+  </section>
+
+  <section id="links">
+    <div class="container">
+      <h2>External links</h2>
+      <div class="cards">
+        <div class="card"><a href="https://quantum-energy-initiative.org/" target="_blank" rel="noopener">#QEI WEBSITE</a></div>
+        <div class="card"><a href="https://qei2023.sciencesconf.org" target="_blank" rel="noopener">First workshop (Singapore, Nov 2023)</a></div>
+        <div class="card"><a href="https://qei2025.sciencesconf.org" target="_blank" rel="noopener">Second workshop (Grenoble, Jan 2025)</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="venue">
+    <div class="container">
+      <h2>Venue &amp; Travel</h2>
+
+      <div class="cards">
+        <div class="card">
+          <strong>Address</strong>
+          <p>
+            ICFO – The Institute of Photonic Sciences<br>
+            Mediterranean Technology Park (PMT)<br>
+            Av. Carl Friedrich Gauss, 3<br>
+            08860 Castelldefels (Barcelona), Spain<br>
+            Tel.: (+34) 93 553 4002 · E-mail: <a href="mailto:secretariat@icfo.eu">secretariat@icfo.eu</a>
+          </p>
+          <p class="muted">ICFO is in the Parc Mediterrani de la Tecnologia (PMT), in the seaside town of Castelldefels, next to the Canal Olímpic and about ten minutes from the beach.</p>
+          <p><a class="btn" href="https://maps.google.com/?q=ICFO%20Av.%20Carl%20Friedrich%20Gauss%203%2008860%20Castelldefels" target="_blank" rel="noopener">Open in Google Maps</a></p>
+        </div>
+
+        <div class="card">
+          <strong>Best option: Bus X95 (Barcelona ↔ Castelldefels)</strong>
+          <ul>
+            <li><b>Recommended:</b> Take <b>X95</b> from Barcelona (Plaça Catalunya / Rda. Universitat) to Castelldefels (La Muntanyeta area). It’s a direct, frequent express bus to Castelldefels.</li>
+            <li>It will pass in front of PMT/ICFO campus, go through a roundabout and then go back and stop in front of the campus.</li>
+            <li>Cross the street to reach the campus.</li>
+            <li>Always check live times before traveling. TMB is usually the best app but Google maps works as well.</li>
+          </ul>
+          <p style="margin-top:8px">
+            <a class="btn" href="https://moovitapp.com/index/en/public_transit-line-X95-Barcelona-362-2745205-173313270-1" target="_blank" rel="noopener">X95 live times &amp; map</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <strong>By train (Rodalies RENFE)</strong>
+          <ul>
+            <li><b>R2 / R2 Sud</b> to <b>Castelldefels</b> from Barcelona-Sants or Passeig de Gràcia (approx. 20–30 min).</li>
+            <li>Castelldefels station is about 1.5 km from the PMT area.</li>
+          </ul>
+          <p style="margin-top:8px">
+            <a class="btn" href="https://www.tmb.cat/en/barcelona/journey-planner" target="_blank" rel="noopener">Plan with Barcelona Journey Planner</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <strong>From Barcelona–El Prat (BCN) airport</strong>
+          <ul>
+            <li><b>Taxi:</b> ~25–35 min to “ICFO, Av. Carl Friedrich Gauss 3, Castelldefels”.</li>
+            <li><b>Public transport:</b> R2/R2 Sud trains or bus connections toward Castelldefels; check current schedules.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Tickets on the bus</strong>
+          <ul>
+            <li>You can buy a single ticket from the driver on these interurban buses.</li>
+            <li>Approximate price: €2.90 per single journey (non-integrated; valid only for that bus).</li>
+            <li><em>Important:</em> Have small cash. Card payment is not always guaranteed.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Travel cards (Zone 1)</strong>
+          <ul>
+            <li>Barcelona, BCN Airport and Castelldefels (ICFO) are all in <strong>Zone 1</strong> (integrated fare).</li>
+            <li><strong>T-usual, 1 zone:</strong> €22.80 (2026), unlimited journeys for 30 consecutive days.</li>
+            <li><strong>Personalised:</strong> requires ID/passport; non-transferable.</li>
+            <li>Buy at ticket machines or online via <a href="https://t-mobilitat.atm.cat" target="_blank" rel="noopener">t-mobilitat.atm.cat</a>.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Why you’ll like the venue</strong>
+          <p>ICFO sits in a modern technology park with quick access to Barcelona and the Mediterranean coast. The campus is a short hop from long sandy beaches, sport facilities around the Canal Olímpic, and the Garraf natural area—great for an evening stroll after sessions. With frequent trains and the X95 express bus to Barcelona, getting in and out is simple.</p>
+        </div>
+
+        <div class="card">
+          <strong>Useful links</strong>
+          <ul>
+            <li><a href="https://www.icfo.eu/about-icfo/general-information-icfo/location-contact/" target="_blank" rel="noopener">ICFO – Location &amp; Contact</a></li>
+            <li><a href="https://moovitapp.com/index/en/public_transit-ICFO-Barcelona-site_20345949-362" target="_blank" rel="noopener">Public transport to ICFO (live routes)</a></li>
+            <li><a href="https://moovitapp.com/index/en/public_transit-line-X95-Barcelona-362-2745205-173313270-1" target="_blank" rel="noopener">X95 route &amp; live times</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="accommodation">
+    <div class="container">
+      <h2>Accommodation</h2>
+      <p>Recommended hotels near ICFO:</p>
+
+      <div class="cards">
+        <div class="card">
+          <strong>Hotel SB BCN Events ****</strong><br>
+          Ronda de Can Rabadà, 22-24, 08860 Castelldefels · +34 936 64 62 30<br>
+          <a href="https://www.hotel-bcneventscastelldefels.com" target="_blank" rel="noopener">Website</a> · ~12 min walk
+        </div>
+        <div class="card">
+          <strong>MASD Mediterráneo Hotel &amp; Apartments ***</strong><br>
+          Passeig Marítim, 50, 08860 Castelldefels · +34 936 64 72 00<br>
+          <a href="https://www.masdmediterraneo.com" target="_blank" rel="noopener">Website</a> · ~16 min walk
+        </div>
+        <div class="card">
+          <strong>Hotel Canal Olímpic ***</strong><br>
+          Carrer de la Ginesta, 13, 08860 Castelldefels · +34 936 36 06 08<br>
+          <a href="https://www.hotelcanalolimpic.com/en/barcelona/index.asp" target="_blank" rel="noopener">Website</a> · ~9 min walk
+        </div>
+        <div class="card">
+          <strong>Hotel 170 **</strong><br>
+          Passeig del Pitort, 170, 08860 Castelldefels · +34 936 64 55 09<br>
+          <a href="https://www.hotel170.es/en/hotel-170-castelldefels-english/" target="_blank" rel="noopener">Website</a> · ~8 min walk
+        </div>
+        <div class="card">
+          <strong>Hotel ibis Castelldefels **</strong><br>
+          Passeig del Ferrocarril, 342, 08860 Castelldefels · +34 936 34 21 75<br>
+          <a href="https://all.accor.com/hotel/3208/index.en.shtml" target="_blank" rel="noopener">Website</a> · ~12 min walk
+        </div>
+        <div class="card">
+          <strong>Hotel Flora Parc ***</strong><br>
+          Avinguda de la Constitució, 44, 08860 Castelldefels · +34 936 36 19 90<br>
+          <a href="https://floraparc.com/en/" target="_blank" rel="noopener">Website</a> · ~18 min walk
+        </div>
+        <div class="card">
+          <strong>Apartment Denis Playa</strong><br>
+          Carrer de l'Estrella de Mar, 1, 08860 Castelldefels · +34 936 65 28 31<br>
+          <a href="https://denisplaya.com/index.php/english/" target="_blank" rel="noopener">Website</a> · ~33 min walk
+        </div>
+        <div class="card">
+          <strong>Hotel 139 *</strong><br>
+          Passeig de la Marina, 139, 08860 Castelldefels · +34 933 15 73 45<br>
+          <a href="https://www.hotel139.es/en/hotel-139-en/" target="_blank" rel="noopener">Website</a> · ~25 min walk
+        </div>
+        <div class="card">
+          <strong>Hotel Bel Air ****</strong><br>
+          Passeig Marítim, 169, 08860 Castelldefels · +34 936 65 16 00<br>
+          <a href="https://www.hotelbelaircastelldefels.com" target="_blank" rel="noopener">Website</a> · ~26 min walk
+        </div>
+        <div class="card">
+          <strong>Hotel 153 ***</strong><br>
+          Passeig de la Marina, 153, 08860 Castelldefels · +34 932 50 62 48<br>
+          <a href="https://www.hotel153.es/en/hotel-153-en/" target="_blank" rel="noopener">Website</a> · ~27 min walk
+        </div>
+        <div class="card">
+          <strong>Hotel Playafels ****</strong><br>
+          Playa Ribera de San Pedro, 1-9, 08860 Castelldefels · +34 936 65 12 50<br>
+          <a href="https://www.hotelplayafels.com" target="_blank" rel="noopener">Website</a> · ~31 min walk
+        </div>
+        <div class="card">
+          <strong>Hotel Ciudad de Castelldefels ***</strong><br>
+          Passeig de la Marina, 212, 08860 Castelldefels · +34 936 65 19 00<br>
+          <a href="https://www.hotelciudaddecastelldefels.com" target="_blank" rel="noopener">Website</a> · ~30 min walk
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sponsors">
+    <div class="container">
+      <h2>Sponsors</h2>
+
+      <div class="logo-grid">
+        <div class="logo-card">
+          <a href="https://alice-bob.com/" target="_blank" rel="noopener">
+            <img class="sponsor-logo-dark" src="assets/ABlogo.svg" alt="Alice &amp; Bob logo">
+            <img class="sponsor-logo-light" src="assets/ABlogoBlack.svg" alt="Alice &amp; Bob logo">
+          </a>
+        </div>
+
+        <div class="logo-card">
+          <a href="https://qilimanjaro.tech/" target="_blank" rel="noopener">
+            <img src="assets/Qilimanjaro_logo_color.svg" alt="Qilimanjaro logo">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="cards">
+        <div class="card">
+          <strong>Email</strong>
+          <p><a href="mailto:contact@quantum-energy-initiative.org">contact@quantum-energy-initiative.org</a></p>
+          <p class="muted">Place: ICFO Auditorium • Dates: 18–22 May 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div>© 2026 QEI Workshop • Last updated <span id="lastUpdated"></span>. • <a href="https://quantum-energy-initiative.org/" target="_blank" rel="noopener">Official QEI site</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // DOM ready
+    window.addEventListener('DOMContentLoaded', () => {
+      // Theme toggle (dark/light)
+      const themeBtn = document.getElementById('themeToggle');
+      themeBtn?.addEventListener('click', () => {
+        const light = document.body.classList.toggle('light');
+        themeBtn.setAttribute('aria-pressed', light ? 'true' : 'false');
+        themeBtn.textContent = light ? 'Toggle dark' : 'Toggle light';
+      });
+
+      // Mobile nav toggle
+      const navToggle = document.getElementById('navToggle');
+      const nav = document.getElementById('primary-nav');
+      if (navToggle && nav) {
+        navToggle.addEventListener('click', () => {
+          const open = nav.classList.toggle('open');
+          navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+
+      // Last updated stamp
+      const lastUpdatedEl = document.getElementById('lastUpdated');
+      if (lastUpdatedEl) lastUpdatedEl.textContent = new Date().toLocaleDateString();
+    });
+  </script>
+</body>
+</html>
+
