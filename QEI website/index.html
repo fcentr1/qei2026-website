@@ -118,6 +118,22 @@
 }
 .notice strong{ display:block; margin-bottom:6px; }
 
+    /* Sponsor tiers */
+.sponsor-tier{ margin-top: 14px; }
+.sponsor-tier h3{ margin: 10px 0 10px; }
+
+/* Premium sponsors: larger cards/logos */
+.logo-grid.premium{
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+.logo-grid.premium .logo-card{
+  min-height:140px;
+}
+.logo-grid.premium .logo-card img{
+  max-height:92px;
+}
+
+    
 
     /* Agenda image */
 .agenda-img{
@@ -242,7 +258,6 @@
 
     <div class="agenda-actions">
       <a class="btn" href="assets/Agenda-External.pdf" target="_blank" rel="noopener">Open PDF</a>
-      <a class="btn" href="assets/Agenda-External.pdf" download>Download PDF</a>
     </div>
   </div>
 </section>
@@ -472,26 +487,53 @@
     </div>
   </section>
 
-  <section id="sponsors">
-    <div class="container">
-      <h2>Sponsors</h2>
+ <section id="sponsors">
+  <div class="container">
+    <h2>Sponsors</h2>
 
-      <div class="logo-grid">
+    <div class="sponsor-tier">
+      <h3>Premium sponsor</h3>
+      <div class="logo-grid premium">
         <div class="logo-card">
           <a href="https://alice-bob.com/" target="_blank" rel="noopener">
+            <!-- If you still use SVG variants for A&B, keep these two lines: -->
             <img class="sponsor-logo-dark" src="assets/ABlogo.svg" alt="Alice &amp; Bob logo">
             <img class="sponsor-logo-light" src="assets/ABlogoBlack.svg" alt="Alice &amp; Bob logo">
           </a>
         </div>
+      </div>
+    </div>
+
+    <div class="sponsor-tier">
+      <h3>Sponsors</h3>
+      <div class="logo-grid">
+        <div class="logo-card">
+          <img src="assets/IBM.jpg" alt="IBM logo">
+        </div>
 
         <div class="logo-card">
-          <a href="https://qilimanjaro.tech/" target="_blank" rel="noopener">
-            <img src="assets/Qilimanjaro_logo_color.svg" alt="Qilimanjaro logo">
-          </a>
+          <img src="assets/OVHCloud.jpg" alt="OVHcloud logo">
+        </div>
+
+        <div class="logo-card">
+          <img src="assets/Quobly.jpg" alt="Quobly logo">
+        </div>
+
+        <div class="logo-card">
+          <img src="assets/quantaware.jpg" alt="QuantaWare logo">
+        </div>
+
+        <div class="logo-card">
+          <img src="assets/quantonation.jpg" alt="Quantonation logo">
+        </div>
+
+        <div class="logo-card">
+          <img src="assets/majulab.jpg" alt="Majulab logo">
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <section id="contact">
     <div class="container">
