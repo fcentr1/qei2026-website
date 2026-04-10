@@ -175,7 +175,7 @@
   }
   </script>
 </head>
-<body>
+<body class="light">
   <header>
     <div class="container nav">
       <div class="brand">
@@ -262,9 +262,6 @@
   </div>
 </section>
 
-      <p class="muted" style="margin-top:10px">
-        If the embedded viewer does not load on your browser, use the “Open agenda (PDF)” button.
-      </p>
     </div>
   </div>
 </section>
@@ -563,7 +560,11 @@
     // DOM ready
     window.addEventListener('DOMContentLoaded', () => {
       // Theme toggle (dark/light)
-      const themeBtn = document.getElementById('themeToggle');
+      const themeBtn = document.getElementById('themeToggle'); 
+      if (themeBtn && document.body.classList.contains('light')) {
+  themeBtn.setAttribute('aria-pressed', 'true');
+  themeBtn.textContent = 'Toggle dark';
+}
       themeBtn?.addEventListener('click', () => {
         const light = document.body.classList.toggle('light');
         themeBtn.setAttribute('aria-pressed', light ? 'true' : 'false');
