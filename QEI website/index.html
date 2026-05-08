@@ -149,6 +149,32 @@
   flex-wrap:wrap;
   margin-top:12px;
 }
+
+/* Program speaker links */
+.speaker-link{ color: var(--brand); text-decoration: none; }
+.speaker-link:hover{ text-decoration: underline; }
+
+/* Option C: small inline “ⓘ” that expands the title */
+.talk-details{
+  display:inline-block;
+  margin-left:6px;
+  vertical-align:baseline;
+}
+.talk-details summary{
+  display:inline;
+  cursor:pointer;
+  color:var(--muted);
+  list-style:none;
+}
+.talk-details summary::-webkit-details-marker{ display:none; } /* Safari/Chrome */
+.talk-details[open] summary{ color: var(--text); }
+.talk-title{
+  margin-top:6px;
+  color:var(--muted);
+  max-width:70ch;
+}
+
+    
     
   </style>
 
@@ -260,7 +286,7 @@
       <a class="btn" href="assets/Agenda-External.pdf" target="_blank" rel="noopener">Open PDF</a>
     </div>
 
-   <p class="muted">Schedule (subject to change).</p>
+  <p class="muted">Schedule (subject to change).</p>
 
 <div class="cards">
 
@@ -274,9 +300,18 @@
       <li><strong>16:30</strong> Invited talk — <strong>James Quach</strong></li>
       <li><strong>17:00</strong> Contributed talks
         <ul>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/73bf0deadc2915a1a7037c233bf243f99e67b74057eedaf7eb12a01235b0ac8f/Abstract_QEI_V.Cavina.pdf" target="_blank" rel="noopener"><strong>Vasco Cavina</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/2201d24b0d32bd626763515056b52f0c4857dab31759620930de90430544aaf6/abstract_qei26_lutz.pdf" target="_blank" rel="noopener"><strong>Eric Lutz</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/c2564970add52b635cb6d6fa3d8402b6c1cf4b665e06dccb64985bbbbe364192/QB_talk.pdf" target="_blank" rel="noopener"><strong>Alan Santos</strong></a></li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/73bf0deadc2915a1a7037c233bf243f99e67b74057eedaf7eb12a01235b0ac8f/Abstract_QEI_V.Cavina.pdf" target="_blank" rel="noopener"><strong>Vasco Cavina</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Exact requirements for battery-assisted qubit gates</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/2201d24b0d32bd626763515056b52f0c4857dab31759620930de90430544aaf6/abstract_qei26_lutz.pdf" target="_blank" rel="noopener"><strong>Eric Lutz</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Combining energy efficiency and quantum advantage in cyclic machines</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/c2564970add52b635cb6d6fa3d8402b6c1cf4b665e06dccb64985bbbbe364192/QB_talk.pdf" target="_blank" rel="noopener"><strong>Alan Santos</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Quantum charging advantage in superconducting solid-state batteries</div></details>
+          </li>
         </ul>
       </li>
     </ul>
@@ -291,9 +326,18 @@
 
       <li><strong>12:00</strong> Contributed talks
         <ul>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/47562af61280af2aec7373cebf19c12b53d0cb9af7c4215e7b8b12c2eea201d1/Energy_Efficiency_of_Quantum_Computers_abstract_submission.pdf" target="_blank" rel="noopener"><strong>Miquel Carrasco Codina</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/d674df3c90208865a07d7e2caf558110f01ac089f663237845c8dce7c0bfce53/ABSTRACT_CHAIMAE0.pdf" target="_blank" rel="noopener"><strong>Chaimae Chrirou</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/355dc6778d64b0a428b4c008000f01fd7dd29903c59697848082dfdc2ad0a439/output__1_.pdf" target="_blank" rel="noopener"><strong>Marco Fellous-Asiani</strong></a></li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/47562af61280af2aec7373cebf19c12b53d0cb9af7c4215e7b8b12c2eea201d1/Energy_Efficiency_of_Quantum_Computers_abstract_submission.pdf" target="_blank" rel="noopener"><strong>Miquel Carrasco Codina</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Energy efficiency of quantum computers</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/d674df3c90208865a07d7e2caf558110f01ac089f663237845c8dce7c0bfce53/ABSTRACT_CHAIMAE0.pdf" target="_blank" rel="noopener"><strong>Chaimae Chrirou</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Optimizing attenuators for energy-efficient cryogenics with low-error qubit operation</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/355dc6778d64b0a428b4c008000f01fd7dd29903c59697848082dfdc2ad0a439/output__1_.pdf" target="_blank" rel="noopener"><strong>Marco Fellous-Asiani</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">The energetic challenges of fault-tolerant quantum computing</div></details>
+          </li>
         </ul>
       </li>
 
@@ -301,9 +345,18 @@
 
       <li><strong>15:00</strong> Contributed talks
         <ul>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/540fb5fb51d4afca19f7ae5db998465b9e807e2a714e1e154da25056563166be/Short_Purification_Abstract.pdf" target="_blank" rel="noopener"><strong>Samyak Pratyush Prasad</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/7f5b084d9c611a370c0a01b11e23456390bfc4b95535cd35463849fd946bd085/Abstract.pdf" target="_blank" rel="noopener"><strong>Martí Perarnau-Llobet</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/2fa2b368de933eb91750d15d67733690c4597232c33bd1ebe8259fc3630e61c6/Abstract.pdf" target="_blank" rel="noopener"><strong>Camille Lombard-Latune</strong></a></li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/540fb5fb51d4afca19f7ae5db998465b9e807e2a714e1e154da25056563166be/Short_Purification_Abstract.pdf" target="_blank" rel="noopener"><strong>Samyak Pratyush Prasad</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Quantum indistinguishability as a resource for purification</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/7f5b084d9c611a370c0a01b11e23456390bfc4b95535cd35463849fd946bd085/Abstract.pdf" target="_blank" rel="noopener"><strong>Martí Perarnau-Llobet</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Thermodynamic Networks: Harnessing Non-Equilibrium Steady States for Computation</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/2fa2b368de933eb91750d15d67733690c4597232c33bd1ebe8259fc3630e61c6/Abstract.pdf" target="_blank" rel="noopener"><strong>Camille Lombard-Latune</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Energy shortcuts of quantum protocols</div></details>
+          </li>
         </ul>
       </li>
 
@@ -312,9 +365,18 @@
 
       <li><strong>17:00</strong> Contributed talks
         <ul>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/9150271b8274b709b4850a360e0836b65113c59143d5d8dfa489679276ce6ba6/Energetic_cost_of_classical_data.pdf" target="_blank" rel="noopener"><strong>Harshit Verma</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/cd8b1b812c718cf9a7cff3617b8af8aefce2ef25e95f1ba382e97f2bfea0bd8d/Abstract_QEI.pdf" target="_blank" rel="noopener"><strong>Gonzalo Manzano</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/624c050f34fa4663a792240f74c43f36f61ea8f215d5f1d5af1f0c18c98d44fc/QEI_Workshop__3_abstract_1.pdf" target="_blank" rel="noopener"><strong>Yoann Piétri</strong></a></li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/9150271b8274b709b4850a360e0836b65113c59143d5d8dfa489679276ce6ba6/Energetic_cost_of_classical_data.pdf" target="_blank" rel="noopener"><strong>Harshit Verma</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">The energetic cost of loading classical data in quantum computers</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/cd8b1b812c718cf9a7cff3617b8af8aefce2ef25e95f1ba382e97f2bfea0bd8d/Abstract_QEI.pdf" target="_blank" rel="noopener"><strong>Gonzalo Manzano</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Quantum Time Crystal Clock and its Performance</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/624c050f34fa4663a792240f74c43f36f61ea8f215d5f1d5af1f0c18c98d44fc/QEI_Workshop__3_abstract_1.pdf" target="_blank" rel="noopener"><strong>Yoann Piétri</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Theoretical Lower Bounds on the Energetic Consumption of Continuous-Variable Quantum Key Distribution</div></details>
+          </li>
         </ul>
       </li>
     </ul>
@@ -329,9 +391,18 @@
 
       <li><strong>12:00</strong> Contributed talks
         <ul>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/b3defa76ea2cdee489e421caf0a82499e707775a72677cbb683364c5f82c2db4/Omar___QEI_Workshop_2026_Abstract.pdf" target="_blank" rel="noopener"><strong>Yasser Omar</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/b5c6f94270ae21cbf522c92cb055aa8b936b10abde54347a8564cd6e062b177c/QEI_Barcelona_abstract_talk.pdf" target="_blank" rel="noopener"><strong>Karol Horodecki</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/409d5921c9e3f1a2318769d65b33528d35e48ce8e126edb43caa07dc54dd0aca/distributed_quantum_thermodynamics_identified.pdf" target="_blank" rel="noopener"><strong>Jakub Czartowski</strong></a></li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/b3defa76ea2cdee489e421caf0a82499e707775a72677cbb683364c5f82c2db4/Omar___QEI_Workshop_2026_Abstract.pdf" target="_blank" rel="noopener"><strong>Yasser Omar</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Benchmarking the Energetic Performance of Different Platforms of Quantum Computation</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/b5c6f94270ae21cbf522c92cb055aa8b936b10abde54347a8564cd6e062b177c/QEI_Barcelona_abstract_talk.pdf" target="_blank" rel="noopener"><strong>Karol Horodecki</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Quantification of the energy consumption of entanglement distribution</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/409d5921c9e3f1a2318769d65b33528d35e48ce8e126edb43caa07dc54dd0aca/distributed_quantum_thermodynamics_identified.pdf" target="_blank" rel="noopener"><strong>Jakub Czartowski</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Distributed Quantum Thermodynamics: Local Operations and Resource Engines</div></details>
+          </li>
         </ul>
       </li>
 
@@ -348,9 +419,18 @@
     <ul>
       <li><strong>10:00</strong> Contributed talks
         <ul>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/9e3cc00394bfcff2607906995b8821eaa21c4e8ccaedeffb87e78b78e6a67e9f/QEI_abstract.pdf" target="_blank" rel="noopener"><strong>Lirandë Pira</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/af404c4576a02a6244d5506d113daa9214b0861356a9303905047e0f21db4f30/QEI_submission.pdf" target="_blank" rel="noopener"><strong>Yukuan Tao</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/f9e7289675362ccdd2f9f92561c52461ecccffb1036accbd80086fb80a12a99b/QEI_submission.docx" target="_blank" rel="noopener"><strong>Yutong Luo</strong></a></li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/9e3cc00394bfcff2607906995b8821eaa21c4e8ccaedeffb87e78b78e6a67e9f/QEI_abstract.pdf" target="_blank" rel="noopener"><strong>Lirandë Pira</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">How Much Does Nonlinearity Cost? Resource-Aware Quantum Kolmogorov–Arnold Networks</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/af404c4576a02a6244d5506d113daa9214b0861356a9303905047e0f21db4f30/QEI_submission.pdf" target="_blank" rel="noopener"><strong>Yukuan Tao</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Complexity and Energy Trade-off in Quantum Protocols</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/f9e7289675362ccdd2f9f92561c52461ecccffb1036accbd80086fb80a12a99b/QEI_submission.docx" target="_blank" rel="noopener"><strong>Yutong Luo</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Thermodynamic criteria for signaling in quantum channels</div></details>
+          </li>
         </ul>
       </li>
 
@@ -359,9 +439,18 @@
 
       <li><strong>12:00</strong> Contributed talks
         <ul>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/98ad60a9f9e6e7cc7959aa76a7c55216fa31a095d243563ce68fa02c0c4b2cb1/Felix_Binder_abstract.pdf" target="_blank" rel="noopener"><strong>Felix Binder</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/65ebde4fa3153d000de81e0502214655ae81913a41253380338ae558fef25a93/EF_IDA_QEI.docx" target="_blank" rel="noopener"><strong>Irene D’Amico</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/1b7c4d2c362a8ebcfc1ab187b93c1bef3e6bbe75b67eeb9d2e876ae65a1f5996/QEI_2026_Sevitz.pdf" target="_blank" rel="noopener"><strong>Sofia Sevitz</strong></a></li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/98ad60a9f9e6e7cc7959aa76a7c55216fa31a095d243563ce68fa02c0c4b2cb1/Felix_Binder_abstract.pdf" target="_blank" rel="noopener"><strong>Felix Binder</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Can intersubjectivity emerge from thermodynamics?</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/65ebde4fa3153d000de81e0502214655ae81913a41253380338ae558fef25a93/EF_IDA_QEI.docx" target="_blank" rel="noopener"><strong>Irene D’Amico</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">FRACTIONAL CONTROL GATE PROTOCOLS FOR ENERGY STORAGE AND QUANTUM ENGINES</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/1b7c4d2c362a8ebcfc1ab187b93c1bef3e6bbe75b67eeb9d2e876ae65a1f5996/QEI_2026_Sevitz.pdf" target="_blank" rel="noopener"><strong>Sofia Sevitz</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Harnessing electronic transport to enhance quantum battery charging</div></details>
+          </li>
         </ul>
       </li>
 
@@ -372,9 +461,18 @@
 
       <li><strong>17:00</strong> Contributed talks
         <ul>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/a122401f270ea0e60c4f5c51c4a7ff57f00c2006bc7e1c98ab5ed92ea2ce8ed3/abstract_ALmanza_Marrero.pdf" target="_blank" rel="noopener"><strong>José Antonio Almanza Marrero</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/2bdab8edc1c63676c530c1885a0dcc43b95743aa7b1e09bcb1733acceac06d35/QEI_abstract.pdf" target="_blank" rel="noopener"><strong>Nathan Shettell</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/e2cd902c36507569ae492d61a7769801bded7379cf77fa023ce870472a67ee09/Talk_abstract_Hovhannisyan.pdf" target="_blank" rel="noopener"><strong>Karen Hovhannisyan</strong></a></li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/a122401f270ea0e60c4f5c51c4a7ff57f00c2006bc7e1c98ab5ed92ea2ce8ed3/abstract_ALmanza_Marrero.pdf" target="_blank" rel="noopener"><strong>José Antonio Almanza Marrero</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">REASSESSING QUANTUM-THERMODYNAMIC ENHANCEMENTS IN CONTINUOUS THERMAL MACHINES</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/2bdab8edc1c63676c530c1885a0dcc43b95743aa7b1e09bcb1733acceac06d35/QEI_abstract.pdf" target="_blank" rel="noopener"><strong>Nathan Shettell</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Energetic Efficiency of Resource State Generation for Fusion-Based Quantum Computation</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/e2cd902c36507569ae492d61a7769801bded7379cf77fa023ce870472a67ee09/Talk_abstract_Hovhannisyan.pdf" target="_blank" rel="noopener"><strong>Karen Hovhannisyan</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Correlations enable lossless ergotropy transport</div></details>
+          </li>
         </ul>
       </li>
     </ul>
@@ -389,15 +487,26 @@
 
       <li><strong>12:00</strong> Contributed talks
         <ul>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/be43764959681b46db13bfd8ae1e65cb5d26cd994bfc6c3aa00cc378d118bfd3/Precision_Bounds_in_QBs.pdf" target="_blank" rel="noopener"><strong>Manabendra Nath Bera</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/77e13268265eb037077407860db46d302c0d96af9fd44335ef67486b9fb30ed9/abstract_paper.pdf" target="_blank" rel="noopener"><strong>Iris Paparelle</strong></a></li>
-          <li><a class="speaker-link" href="https://api.typeform.com/responses/files/66cbc5b0480f2885677bd54e0dcdc715280915cb1820e86b5b617fcaff179368/abstract.docx" target="_blank" rel="noopener"><strong>PNG WEN HAN</strong></a></li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/be43764959681b46db13bfd8ae1e65cb5d26cd994bfc6c3aa00cc378d118bfd3/Precision_Bounds_in_QBs.pdf" target="_blank" rel="noopener"><strong>Manabendra Nath Bera</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Fundamental Limitations on the Reliabilities of Power and Work in Quantum Batteries</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/77e13268265eb037077407860db46d302c0d96af9fd44335ef67486b9fb30ed9/abstract_paper.pdf" target="_blank" rel="noopener"><strong>Iris Paparelle</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Experimental memory control in continuous variable optical quantum reservoir computing</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/66cbc5b0480f2885677bd54e0dcdc715280915cb1820e86b5b617fcaff179368/abstract.docx" target="_blank" rel="noopener"><strong>PNG WEN HAN</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Sub-Bath Cooling in Bosonic Systems</div></details>
+          </li>
         </ul>
       </li>
 
       <li><strong>13:00</strong> Wrap-up and call to action</li>
     </ul>
   </div>
+
+</div>
 
 </div>
   </div>
