@@ -174,6 +174,46 @@
   max-width:70ch;
 }
 
+
+/* Invited: title first, abstract on second click */
+.invited-info{
+  display:inline-block;
+  margin-left:8px;
+  vertical-align:baseline;
+}
+
+.invited-info summary{
+  display:inline;
+  cursor:pointer;
+  color:var(--muted);
+  list-style:none;
+}
+.invited-info summary::-webkit-details-marker{ display:none; }
+
+.invited-title{
+  margin-top:8px;
+  color:var(--text);
+  max-width:95ch;
+}
+
+.invited-abstract{
+  margin-top:8px;
+}
+.invited-abstract summary{
+  display:inline;
+  cursor:pointer;
+  color:var(--brand);
+  list-style:none;
+}
+.invited-abstract summary::-webkit-details-marker{ display:none; }
+
+.invited-abstract-text{
+  margin-top:8px;
+  color:var(--muted);
+  white-space:pre-wrap;
+  max-width:95ch;
+}
+
     
     
   </style>
@@ -275,253 +315,7 @@
     </div>
   </section>
 
-<section id="agenda">
-  <div class="container">
-    <h2>Agenda</h2>
-    <p class="muted">Preliminary program (subject to change).</p>
-
-    <img class="agenda-img" src="assets/agenda.png" alt="QEI2026 agenda">
-
-    <div class="agenda-actions">
-      <a class="btn" href="assets/Agenda-External.pdf" target="_blank" rel="noopener">Open PDF</a>
-    </div>
-
-  <p class="muted">Schedule (subject to change).</p>
-
-<div class="cards">
-
-  <div class="card">
-    <strong>Monday 18/05</strong>
-    <ul>
-      <li><strong>13:30</strong> Registration + badges</li>
-      <li><strong>14:30</strong> Opening talk</li>
-      <li><strong>15:00</strong> Keynote — <strong>Juan MR Parrondo</strong></li>
-      <li><strong>16:00</strong> Break</li>
-      <li><strong>16:30</strong> Invited talk — <strong>James Quach</strong></li>
-      <li><strong>17:00</strong> Contributed talks
-        <ul>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/73bf0deadc2915a1a7037c233bf243f99e67b74057eedaf7eb12a01235b0ac8f/Abstract_QEI_V.Cavina.pdf" target="_blank" rel="noopener"><strong>Vasco Cavina</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Exact requirements for battery-assisted qubit gates</div></details>
-          </li>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/2201d24b0d32bd626763515056b52f0c4857dab31759620930de90430544aaf6/abstract_qei26_lutz.pdf" target="_blank" rel="noopener"><strong>Eric Lutz</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Combining energy efficiency and quantum advantage in cyclic machines</div></details>
-          </li>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/c2564970add52b635cb6d6fa3d8402b6c1cf4b665e06dccb64985bbbbe364192/QB_talk.pdf" target="_blank" rel="noopener"><strong>Alan Santos</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Quantum charging advantage in superconducting solid-state batteries</div></details>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <strong>Tuesday 19/05</strong>
-    <ul>
-      <li><strong>10:00</strong> Keynote — <strong>Gerard Milburn</strong></li>
-      <li><strong>11:00</strong> Break</li>
-      <li><strong>11:30</strong> Invited talk — <strong>Natalia Ares</strong></li>
-
-      <li><strong>12:00</strong> Contributed talks
-        <ul>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/47562af61280af2aec7373cebf19c12b53d0cb9af7c4215e7b8b12c2eea201d1/Energy_Efficiency_of_Quantum_Computers_abstract_submission.pdf" target="_blank" rel="noopener"><strong>Miquel Carrasco Codina</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Energy efficiency of quantum computers</div></details>
-          </li>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/d674df3c90208865a07d7e2caf558110f01ac089f663237845c8dce7c0bfce53/ABSTRACT_CHAIMAE0.pdf" target="_blank" rel="noopener"><strong>Chaimae Chrirou</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Optimizing attenuators for energy-efficient cryogenics with low-error qubit operation</div></details>
-          </li>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/355dc6778d64b0a428b4c008000f01fd7dd29903c59697848082dfdc2ad0a439/output__1_.pdf" target="_blank" rel="noopener"><strong>Marco Fellous-Asiani</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">The energetic challenges of fault-tolerant quantum computing</div></details>
-          </li>
-        </ul>
-      </li>
-
-      <li><strong>13:00</strong> Lunch + poster session 1</li>
-
-      <li><strong>15:00</strong> Contributed talks
-        <ul>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/540fb5fb51d4afca19f7ae5db998465b9e807e2a714e1e154da25056563166be/Short_Purification_Abstract.pdf" target="_blank" rel="noopener"><strong>Samyak Pratyush Prasad</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Quantum indistinguishability as a resource for purification</div></details>
-          </li>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/7f5b084d9c611a370c0a01b11e23456390bfc4b95535cd35463849fd946bd085/Abstract.pdf" target="_blank" rel="noopener"><strong>Martí Perarnau-Llobet</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Thermodynamic Networks: Harnessing Non-Equilibrium Steady States for Computation</div></details>
-          </li>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/2fa2b368de933eb91750d15d67733690c4597232c33bd1ebe8259fc3630e61c6/Abstract.pdf" target="_blank" rel="noopener"><strong>Camille Lombard-Latune</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Energy shortcuts of quantum protocols</div></details>
-          </li>
-        </ul>
-      </li>
-
-      <li><strong>16:00</strong> Break</li>
-      <li><strong>16:30</strong> Invited talk — <strong>Chris Langer</strong></li>
-
-      <li><strong>17:00</strong> Contributed talks
-        <ul>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/9150271b8274b709b4850a360e0836b65113c59143d5d8dfa489679276ce6ba6/Energetic_cost_of_classical_data.pdf" target="_blank" rel="noopener"><strong>Harshit Verma</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">The energetic cost of loading classical data in quantum computers</div></details>
-          </li>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/cd8b1b812c718cf9a7cff3617b8af8aefce2ef25e95f1ba382e97f2bfea0bd8d/Abstract_QEI.pdf" target="_blank" rel="noopener"><strong>Gonzalo Manzano</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Quantum Time Crystal Clock and its Performance</div></details>
-          </li>
-
-                    <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/65ebde4fa3153d000de81e0502214655ae81913a41253380338ae558fef25a93/EF_IDA_QEI.docx" target="_blank" rel="noopener"><strong>Irene D’Amico</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Fractional control gate protocols for energy storage and quantum engines</div></details>
-          </li>
-         
-        </ul>
-      </li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <strong>Wednesday 20/05</strong>
-    <ul>
-      <li><strong>10:00</strong> Keynote — <strong>Fernando Brandão</strong></li>
-      <li><strong>11:00</strong> Break</li>
-      <li><strong>11:30</strong> Invited talk — <strong>Arnau Riera</strong></li>
-
-      <li><strong>12:00</strong> Contributed talks
-        <ul>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/b3defa76ea2cdee489e421caf0a82499e707775a72677cbb683364c5f82c2db4/Omar___QEI_Workshop_2026_Abstract.pdf" target="_blank" rel="noopener"><strong>Yasser Omar</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Benchmarking the Energetic Performance of Different Platforms of Quantum Computation</div></details>
-          </li>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/b5c6f94270ae21cbf522c92cb055aa8b936b10abde54347a8564cd6e062b177c/QEI_Barcelona_abstract_talk.pdf" target="_blank" rel="noopener"><strong>Karol Horodecki</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Quantification of the energy consumption of entanglement distribution</div></details>
-          </li>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/409d5921c9e3f1a2318769d65b33528d35e48ce8e126edb43caa07dc54dd0aca/distributed_quantum_thermodynamics_identified.pdf" target="_blank" rel="noopener"><strong>Jakub Czartowski</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Distributed Quantum Thermodynamics: Local Operations and Resource Engines</div></details>
-          </li>
-        </ul>
-      </li>
-
-      <li><strong>13:00</strong> Lunch + poster session 2</li>
-      <li><strong>15:00</strong> Invited talk — <strong>Nelly Maria Canessa Araujo</strong></li>
-      <li><strong>15:30</strong> QEI Roadmap discussion</li>
-      <li><strong>17:30</strong> Free time (go to the beach!)</li>
-      <li><strong>19:30</strong> Conference dinner</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <strong>Thursday 21/05</strong>
-    <ul>
-      <li><strong>10:00</strong> Contributed talks
-        <ul>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/9e3cc00394bfcff2607906995b8821eaa21c4e8ccaedeffb87e78b78e6a67e9f/QEI_abstract.pdf" target="_blank" rel="noopener"><strong>Lirandë Pira</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">How Much Does Nonlinearity Cost? Resource-Aware Quantum Kolmogorov–Arnold Networks</div></details>
-          </li>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/af404c4576a02a6244d5506d113daa9214b0861356a9303905047e0f21db4f30/QEI_submission.pdf" target="_blank" rel="noopener"><strong>Yukuan Tao</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Complexity and Energy Trade-off in Quantum Protocols</div></details>
-          </li>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/f9e7289675362ccdd2f9f92561c52461ecccffb1036accbd80086fb80a12a99b/QEI_submission.docx" target="_blank" rel="noopener"><strong>Yutong Luo</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Thermodynamic criteria for signaling in quantum channels</div></details>
-          </li>
-        </ul>
-      </li>
-
-      <li><strong>11:00</strong> Break</li>
-      <li><strong>11:30</strong> Invited talk — <strong>Ariane Soret</strong></li>
-
-      <li><strong>12:00</strong> Contributed talks
-        <ul>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/98ad60a9f9e6e7cc7959aa76a7c55216fa31a095d243563ce68fa02c0c4b2cb1/Felix_Binder_abstract.pdf" target="_blank" rel="noopener"><strong>Felix Binder</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Can intersubjectivity emerge from thermodynamics?</div></details>
-          </li>
-
- <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/624c050f34fa4663a792240f74c43f36f61ea8f215d5f1d5af1f0c18c98d44fc/QEI_Workshop__3_abstract_1.pdf" target="_blank" rel="noopener"><strong>Yoann Piétri</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Theoretical Lower Bounds on the Energetic Consumption of Continuous-Variable Quantum Key Distribution</div></details>
-          </li>
-          
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/1b7c4d2c362a8ebcfc1ab187b93c1bef3e6bbe75b67eeb9d2e876ae65a1f5996/QEI_2026_Sevitz.pdf" target="_blank" rel="noopener"><strong>Sofia Sevitz</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Harnessing electronic transport to enhance quantum battery charging</div></details>
-          </li>
-        </ul>
-      </li>
-
-      <li><strong>13:00</strong> Lunch</li>
-      <li><strong>14:30</strong> Industry round table</li>
-      <li><strong>16:00</strong> Break</li>
-      <li><strong>16:30</strong> Invited talk — <strong>Michael Vasmer</strong></li>
-
-      <li><strong>17:00</strong> Contributed talks
-        <ul>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/a122401f270ea0e60c4f5c51c4a7ff57f00c2006bc7e1c98ab5ed92ea2ce8ed3/abstract_ALmanza_Marrero.pdf" target="_blank" rel="noopener"><strong>José Antonio Almanza Marrero</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Reassessing quantum thermodynamics enhancements in continuous thermal machines</div></details>
-          </li>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/2bdab8edc1c63676c530c1885a0dcc43b95743aa7b1e09bcb1733acceac06d35/QEI_abstract.pdf" target="_blank" rel="noopener"><strong>Nathan Shettell</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Energetic Efficiency of Resource State Generation for Fusion-Based Quantum Computation</div></details>
-          </li>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/e2cd902c36507569ae492d61a7769801bded7379cf77fa023ce870472a67ee09/Talk_abstract_Hovhannisyan.pdf" target="_blank" rel="noopener"><strong>Karen Hovhannisyan</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Correlations enable lossless ergotropy transport</div></details>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <strong>Friday 22/05</strong>
-    <ul>
-      <li><strong>10:00</strong> Keynote — <strong>Christiane Koch</strong></li>
-      <li><strong>11:00</strong> Break</li>
-      <li><strong>11:30</strong> Invited talk — <strong>Nelly Ng</strong></li>
-
-      <li><strong>12:00</strong> Contributed talks
-        <ul>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/be43764959681b46db13bfd8ae1e65cb5d26cd994bfc6c3aa00cc378d118bfd3/Precision_Bounds_in_QBs.pdf" target="_blank" rel="noopener"><strong>Manabendra Nath Bera</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Fundamental Limitations on the Reliabilities of Power and Work in Quantum Batteries</div></details>
-          </li>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/77e13268265eb037077407860db46d302c0d96af9fd44335ef67486b9fb30ed9/abstract_paper.pdf" target="_blank" rel="noopener"><strong>Iris Paparelle</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Experimental memory control in continuous variable optical quantum reservoir computing</div></details>
-          </li>
-          <li>
-            <a class="speaker-link" href="https://api.typeform.com/responses/files/66cbc5b0480f2885677bd54e0dcdc715280915cb1820e86b5b617fcaff179368/abstract.docx" target="_blank" rel="noopener"><strong>PNG WEN HAN</strong></a>
-            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Sub-Bath Cooling in Bosonic Systems</div></details>
-          </li>
-        </ul>
-      </li>
-
-      <li><strong>13:00</strong> Wrap-up and call to action</li>
-    </ul>
-  </div>
-
-</div>
-
-</div>
-  </div>
-</section>
-
-    </div>
-  </div>
-</section>
-
-  
-  <section id="speakers">
+ <section id="speakers">
     <div class="container">
       <h2>Invited Speakers</h2>
       <ul>
@@ -581,6 +375,235 @@
   </div>
 </section>
 
+  
+<section id="agenda">
+  <div class="container">
+    <h2>Agenda</h2>
+    <p class="muted">Preliminary program (subject to change).</p>
+
+    <img class="agenda-img" src="assets/agenda.png" alt="QEI2026 agenda">
+
+    <div class="agenda-actions">
+      <a class="btn" href="assets/Agenda-External.pdf" target="_blank" rel="noopener">Open PDF</a>
+    </div>
+
+ <p class="muted">Schedule (subject to change).</p>
+
+<div class="cards">
+
+  <div class="card">
+    <strong>Monday 18/05</strong>
+    <ul>
+      <li><strong>13:30</strong> Registration + badges</li>
+      <li><strong>14:30</strong> Opening talk</li>
+      <li><strong>15:00</strong> Keynote — <strong>Juan MR Parrondo</strong>
+        <details class="invited-info">
+          <summary>ⓘ</summary>
+          <div class="invited-title"><strong>Title:</strong> Information flows in nanomachines</div>
+          <details class="invited-abstract">
+            <summary>See abstract</summary>
+            <div class="invited-abstract-text">The original Maxwell demon controls a system by utilizing information about its microstate. In practical applications, it is also interesting to consider autonomous Maxwell demons, i.e., bipartite systems in which one subsystem acts as measurement device and controller for the other. The concept of information flow has been introduced to study the informational aspects of these autonomous bipartite systems in the steady state. This framework makes it possible to interpret certain nanomachines as autonomous Maxwell’s demons or information engines. In this talk, I will present a pedagogical review of these concepts and apply them to a specific energy transducer at the nanoscale: a device that couples electron tunneling through a carbon nanotube to its mechanical oscillations.</div>
+          </details>
+        </details>
+      </li>
+      <li><strong>16:00</strong> Break</li>
+      <li><strong>16:30</strong> Invited talk — <strong>James Quach</strong>
+        <details class="invited-info">
+          <summary>ⓘ</summary>
+          <div class="invited-title"><strong>Title:</strong> Powering Quantum Computation with Quantum Batteries</div>
+          <details class="invited-abstract">
+            <summary>See abstract</summary>
+            <div class="invited-abstract-text">Quantum computers currently depend on room-temperature electronics to continuously supply energy to cryogenic qubits, creating major challenges in scalability and heat dissipation. In this talk, I will present a new approach in which quantum batteries act as intrinsic energy sources for quantum computation. Using a shared bosonic mode coupled to qubits, we show that quantum energy can be coherently recycled throughout a computation, enabling universal quantum logic using only qubit-frequency detuning. The architecture supports fast multiqubit gates, parity measurements, and superextensive scaling effects characteristic of quantum batteries, while eliminating individual microwave drive lines. Simulations with superconducting qubits demonstrate high-fidelity operation under realistic experimental conditions. Beyond improving energetic efficiency, this approach could significantly reduce wiring overhead and increase the scalability of cryogenic quantum processors.</div>
+          </details>
+        </details>
+      </li>
+      <li><strong>17:00</strong> Contributed talks
+        <ul>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/73bf0deadc2915a1a7037c233bf243f99e67b74057eedaf7eb12a01235b0ac8f/Abstract_QEI_V.Cavina.pdf" target="_blank" rel="noopener"><strong>Vasco Cavina</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Exact requirements for battery-assisted qubit gates</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/2201d24b0d32bd626763515056b52f0c4857dab31759620930de90430544aaf6/abstract_qei26_lutz.pdf" target="_blank" rel="noopener"><strong>Eric Lutz</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Combining energy efficiency and quantum advantage in cyclic machines</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/c2564970add52b635cb6d6fa3d8402b6c1cf4b665e06dccb64985bbbbe364192/QB_talk.pdf" target="_blank" rel="noopener"><strong>Alan Santos</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Quantum charging advantage in superconducting solid-state batteries</div></details>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <strong>Tuesday 19/05</strong>
+    <ul>
+      <li><strong>10:00</strong> Keynote — <strong>Gerard Milburn</strong>
+        <details class="invited-info">
+          <summary>ⓘ</summary>
+          <div class="invited-title"><strong>Title:</strong> The thermodynamic constraints of physical learning machines.</div>
+          <details class="invited-abstract">
+            <summary>See abstract</summary>
+            <div class="invited-abstract-text">Algorithms make implicit assumptions about hardware; the lesson of quantum computation. I will discuss the classical and quantum thermodynamics of learning machines. By treating learning as the transformation of sampled probability distributions, classical and quantum approaches can be unified. The goal is to find a physical implementation that minimises the thermodynamic cost, including bandwidth. Quantum photonics offers the most promising technology.</div>
+          </details>
+        </details>
+      </li>
+      <li><strong>11:00</strong> Break</li>
+      <li><strong>11:30</strong> Invited talk — <strong>Natalia Ares</strong>
+        <details class="invited-info">
+          <summary>ⓘ</summary>
+          <div class="invited-title"><strong>Title:</strong> TBA</div>
+          <details class="invited-abstract">
+            <summary>See abstract</summary>
+            <div class="invited-abstract-text">TBA</div>
+          </details>
+        </details>
+      </li>
+
+      <li><strong>12:00</strong> Contributed talks
+        <ul>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/47562af61280af2aec7373cebf19c12b53d0cb9af7c4215e7b8b12c2eea201d1/Energy_Efficiency_of_Quantum_Computers_abstract_submission.pdf" target="_blank" rel="noopener"><strong>Miquel Carrasco Codina</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Energy efficiency of quantum computers</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/d674df3c90208865a07d7e2caf558110f01ac089f663237845c8dce7c0bfce53/ABSTRACT_CHAIMAE0.pdf" target="_blank" rel="noopener"><strong>Chaimae Chrirou</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Optimizing attenuators for energy-efficient cryogenics with low-error qubit operation</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/355dc6778d64b0a428b4c008000f01fd7dd29903c59697848082dfdc2ad0a439/output__1_.pdf" target="_blank" rel="noopener"><strong>Marco Fellous-Asiani</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">The energetic challenges of fault-tolerant quantum computing</div></details>
+          </li>
+        </ul>
+      </li>
+
+      <li><strong>13:00</strong> Lunch + poster session 1</li>
+
+      <li><strong>15:00</strong> Contributed talks
+        <ul>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/540fb5fb51d4afca19f7ae5db998465b9e807e2a714e1e154da25056563166be/Short_Purification_Abstract.pdf" target="_blank" rel="noopener"><strong>Samyak Pratyush Prasad</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Quantum indistinguishability as a resource for purification</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/7f5b084d9c611a370c0a01b11e23456390bfc4b95535cd35463849fd946bd085/Abstract.pdf" target="_blank" rel="noopener"><strong>Martí Perarnau-Llobet</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Thermodynamic Networks: Harnessing Non-Equilibrium Steady States for Computation</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/2fa2b368de933eb91750d15d67733690c4597232c33bd1ebe8259fc3630e61c6/Abstract.pdf" target="_blank" rel="noopener"><strong>Camille Lombard-Latune</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Energy shortcuts of quantum protocols</div></details>
+          </li>
+        </ul>
+      </li>
+
+      <li><strong>16:00</strong> Break</li>
+      <li><strong>16:30</strong> Invited talk — <strong>Chris Langer</strong>
+        <details class="invited-info">
+          <summary>ⓘ</summary>
+          <div class="invited-title"><strong>Title:</strong> Quantinuum Helios - a 98 qubit ion-based quantum computer</div>
+          <details class="invited-abstract">
+            <summary>See abstract</summary>
+            <div class="invited-abstract-text">Helios is Quantinuum's 3rd generation quantum computer. It houses 98 moveable ion qubits with fidelities greater than 99.92% across all qubit pairs. I will describe how Helios works and benchmarks of its performance. I will showcase applications run on Helios both at the physical level and the logical level. Lastly, I will highlight recent results in fault-tolerant quantum computing on Helios.</div>
+          </details>
+        </details>
+      </li>
+
+      <li><strong>17:00</strong> Contributed talks
+        <ul>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/9150271b8274b709b4850a360e0836b65113c59143d5d8dfa489679276ce6ba6/Energetic_cost_of_classical_data.pdf" target="_blank" rel="noopener"><strong>Harshit Verma</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">The energetic cost of loading classical data in quantum computers</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/cd8b1b812c718cf9a7cff3617b8af8aefce2ef25e95f1ba382e97f2bfea0bd8d/Abstract_QEI.pdf" target="_blank" rel="noopener"><strong>Gonzalo Manzano</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Quantum Time Crystal Clock and its Performance</div></details>
+          </li>
+
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/65ebde4fa3153d000de81e0502214655ae81913a41253380338ae558fef25a93/EF_IDA_QEI.docx" target="_blank" rel="noopener"><strong>Irene D’Amico</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">FRACTIONAL CONTROL GATE PROTOCOLS FOR ENERGY STORAGE AND QUANTUM ENGINES</div></details>
+          </li>
+
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <strong>Wednesday 20/05</strong>
+    <ul>
+      <li><strong>10:00</strong> Keynote — <strong>Fernando Brandão</strong>
+        <details class="invited-info">
+          <summary>ⓘ</summary>
+          <div class="invited-title"><strong>Title:</strong> Quantum Gibbs Sampling</div>
+          <details class="invited-abstract">
+            <summary>See abstract</summary>
+            <div class="invited-abstract-text">I’ll discuss the problem of simulating thermal physics/chemistry on a quantum computer, focusing on recent advances in developing fast and physically motivated quantum algorithms for Gibbs sampling.</div>
+          </details>
+        </details>
+      </li>
+      <li><strong>11:00</strong> Break</li>
+      <li><strong>11:30</strong> Invited talk — <strong>Arnau Riera</strong>
+        <details class="invited-info">
+          <summary>ⓘ</summary>
+          <div class="invited-title"><strong>Title:</strong> Beyond Gate Counts: Time and Energy in Quantum Simulation</div>
+          <details class="invited-abstract">
+            <summary>See abstract</summary>
+            <div class="invited-abstract-text">Quantum simulation can be approached through digital circuits, analog dynamics, or classical computation, each with different costs and limitations. In this talk, we will compare these paradigms for Hamiltonian simulation using representative spin models as benchmarks. The focus will be on how accuracy requirements translate into physical resources: circuit depth, runtime, accumulated errors, fidelity constraints, and energy consumption. The goal is to move beyond gate counts toward a more complete picture of time-to-solution and energy-to-solution in quantum simulation.</div>
+          </details>
+        </details>
+      </li>
+
+      <li><strong>12:00</strong> Contributed talks
+        <ul>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/b3defa76ea2cdee489e421caf0a82499e707775a72677cbb683364c5f82c2db4/Omar___QEI_Workshop_2026_Abstract.pdf" target="_blank" rel="noopener"><strong>Yasser Omar</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Benchmarking the Energetic Performance of Different Platforms of Quantum Computation</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/b5c6f94270ae21cbf522c92cb055aa8b936b10abde54347a8564cd6e062b177c/QEI_Barcelona_abstract_talk.pdf" target="_blank" rel="noopener"><strong>Karol Horodecki</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Quantification of the energy consumption of entanglement distribution</div></details>
+          </li>
+          <li>
+            <a class="speaker-link" href="https://api.typeform.com/responses/files/409d5921c9e3f1a2318769d65b33528d35e48ce8e126edb43caa07dc54dd0aca/distributed_quantum_thermodynamics_identified.pdf" target="_blank" rel="noopener"><strong>Jakub Czartowski</strong></a>
+            <details class="talk-details"><summary>ⓘ</summary><div class="talk-title">Distributed Quantum Thermodynamics: Local Operations and Resource Engines</div></details>
+          </li>
+        </ul>
+      </li>
+
+      <li><strong>13:00</strong> Lunch + poster session 2</li>
+      <li><strong>15:00</strong> Invited talk — <strong>Nelly Maria Canessa Araujo</strong>
+        <details class="invited-info">
+          <summary>ⓘ</summary>
+          <div class="invited-title"><strong>Title:</strong> Socially Shaping , Scalability, and Responsible Innovation in Quantum Energy Technologies´</div>
+          <details class="invited-abstract">
+            <summary>See abstract</summary>
+            <div class="invited-abstract-text">Quantum energy technologies are increasingly framed through the optimization of physical resources, energy efficiency, and scalability. This presentation argues that such processes are not solely technical challenges, but socio-technical ones shaped by institutional priorities, funding structures, and societal expectations. Drawing on Science and Technology Studies (STS) and responsible innovation approaches, the talk examines how definitions of “efficiency” in quantum technologies are constructed through policy agendas, industrial partnerships, and infrastructural conditions that determine which applications, costs, and technological pathways are prioritized. By situating quantum systems within broader histories of infrastructure-intensive technologies (including Nuclear Power and large-scale computing), the presentation highlights how technological scaling often produces expanding material and energetic demands rather than simple optimization. Quantum technologies similarly rely upon cryogenic environments, specialized supply chains, and high-energy support infrastructures whose implications extend beyond laboratory performance metrics. The presentation proposes a broader framework for evaluating quantum energy technologies that integrates physical efficiency with questions of social legitimacy, sustainability, and long-term adoption. Rather than critiquing the physics itself, this contribution complements existing technical research by expanding the scope of optimization toward the socio-technical conditions that will shape how quantum technologies scale, who they benefit, and whether their development aligns with broader societal and ecological goals.</div>
+          </details>
+        </details>
+      </li>
+      <li><strong>15:30</strong> QEI Roadmap discussion</li>
+      <li><strong>17:30</strong> Free time (go to the beach!)</li>
+      <li><strong>19:30</strong> Conference dinner</li>
+    </ul>
+  </div>
+
+  <!-- FROM HERE DOWN: unchanged except invited speakers will be updated when you paste the remaining agenda -->
+</div>
+
+</div>
+
+</div>
+  </div>
+</section>
+
+    </div>
+  </div>
+</section>
+
+  
+ 
   <section id="venue">
     <div class="container">
       <h2>Venue &amp; Travel</h2>
